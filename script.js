@@ -84,11 +84,10 @@ musicBtn.addEventListener("click", () => {
 
 // --- Confetti & card ---
 confettiBtn.addEventListener("click", () => launchConfetti(240));
-downloadCard.addEventListener("click", (e) => {
-  e.preventDefault();
+downloadCard.addEventListener("click", () => {
   const dataUrl = generateCardImage(`${birthdayName} — Happy Birthday!`);
   downloadCard.href = dataUrl;
-  downloadCard.click();
+  downloadCard.setAttribute("download", "Birthday-Card.png");
 });
 
 // --- Smooth scroll ---
@@ -193,3 +192,4 @@ function wrapText(ctx, text, x, y, maxWidth, lineHeight) {
   }
   ctx.fillText(line, x, y);
 }
+
