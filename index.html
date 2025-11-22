@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Birthday Surprise 🎉</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="confetti"></canvas>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <h1 class="title">Happy Birthday, <span id="name">You</span>! 🎂</h1>
+      <p class="subtitle">A little surprise crafted with love.</p>
+      <div class="cta-group">
+        <button id="revealBtn" class="btn primary">Reveal the surprise</button>
+        <button id="musicBtn" class="btn ghost">Play music</button>
+      </div>
+      <div class="countdown">
+        <span id="countdownText">Counting down...</span>
+      </div>
+    </div>
+    <div class="scroll-indicator">Scroll for more ↓</div>
+  </header>
+
+  <main>
+    <section class="message" id="messageSection" aria-hidden="true">
+      <h2>A note from the heart</h2>
+      <p id="messageText">
+        On your special day, I wish you laughter that lingers, dreams that dare, and moments that feel like warm sunrise.
+        You are loved—today and always.
+      </p>
+    </section>
+
+    <section class="highlights">
+      <h2>Our favorite moments</h2>
+      <div class="grid">
+        <figure class="card">
+          <img src="https://images.unsplash.com/photo-1523875194681-bedd468c58bf?q=80&w=1080&auto=format&fit=crop" alt="Candles on cake">
+          <figcaption>Candles, wishes, and the brightest smile.</figcaption>
+        </figure>
+        <figure class="card">
+          <img src="https://images.unsplash.com/photo-1542052722245-5d053fc0cf0f?q=80&w=1080&auto=format&fit=crop" alt="Friends celebrating">
+          <figcaption>Laughing till it hurts.</figcaption>
+        </figure>
+        <figure class="card">
+          <img src="https://images.unsplash.com/photo-1533113315091-7c2c493fb1f5?q=80&w=1080&auto=format&fit=crop" alt="Balloon bouquet">
+          <figcaption>Balloons, colors, pure joy.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="timeline">
+      <h2>Birthday plan</h2>
+      <div class="steps">
+        <div class="step">
+          <h3>Step 1</h3>
+          <p>Open the surprise and smile. Confetti guaranteed.</p>
+        </div>
+        <div class="step">
+          <h3>Step 2</h3>
+          <p>Play the song and let the rhythm take over.</p>
+        </div>
+        <div class="step">
+          <h3>Step 3</h3>
+          <p>Scroll through memories and feel the warmth.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-final">
+      <h2>Make a wish</h2>
+      <button id="wishBtn" class="btn primary">Tap to make a wish ✨</button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Made with love — <span id="signature">From me to you</span> ❤️</p>
+  </footer>
+
+  <!-- Surprise Modal -->
+  <div class="modal" id="surpriseModal" aria-hidden="true" role="dialog" aria-label="Birthday surprise">
+    <div class="modal-content">
+      <button class="close" id="closeModal" aria-label="Close">×</button>
+      <h2>Surprise! 🎉</h2>
+      <p>You’re the heartbeat of these memories. Today is your day—shine on.</p>
+      <div class="modal-actions">
+        <button id="confettiBtn" class="btn primary">Confetti blast</button>
+        <a class="btn ghost" id="downloadCard" href="#" download="Birthday-Card.png">Download card</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Optional: add your own mp3 file in the same folder and set the src -->
+  <audio id="bgMusic" src="" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
